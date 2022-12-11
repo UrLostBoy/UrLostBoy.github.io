@@ -513,6 +513,7 @@ img{
 
  
 @media screen and (max-width: 768px){
+ 
   .nav__menu{
     position: fixed;
     top: $header-height;
@@ -718,7 +719,7 @@ img{
   }
 
   60%, 80% {
-    width:30%;
+    width:80%;
   }
 }
 .about__img{
@@ -958,4 +959,10 @@ img{
     }
   }
   
+}
+
+@media screen and(min-width: 0px) and (max-width: 480px){
+  .home__img{
+    width: 80vw;
+  }
 }
