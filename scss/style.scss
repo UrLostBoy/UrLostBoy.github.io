@@ -23,6 +23,10 @@
     $big-font-size: 3.5rem;
     $h2-font-size: 2rem;
     $normal-font-size: 1rem;
+
+    .nav__toggle{
+      display: none;
+    }
 }
 // FOR MAGINS
   $mb-1: 0.5rem;
@@ -518,6 +522,8 @@ img{
     padding: 2rem;
     background-color: $second-color;
     transition: .5s;
+
+
   }
 }
 .nav__item{
@@ -551,6 +557,38 @@ img{
   color:$second-color;
   font-size: 1.5rem;
   cursor: pointer;
+  
+  .nav__list{
+    background: $bg-color;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    right: 0;
+    font-size: 1rem;
+    text-align: center;
+    display: none;  
+    background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  margin-top: 1rem;
+  
+    
+  }
+  .nav__link{
+    color: $second-color;
+  }
+  &:hover > .nav__list,
+   .nav__list:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    color: $second-color;
+  }
 }
 
 
@@ -838,6 +876,7 @@ img{
   .nav__list{
     display: flex;
     padding-top: 0;
+    
   }
   .nav__item{
     margin-left: $mb-6;
